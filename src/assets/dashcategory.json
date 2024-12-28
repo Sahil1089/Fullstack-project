@@ -1,0 +1,65 @@
+{
+    "categories":[
+        {
+            "value":40,
+            "heading":"camera"
+
+        },
+        {
+             "value":42,
+            "heading":"printer"
+        },
+        {
+            "value":60,
+            "heading":"camera tripod"
+
+        },
+        {
+             "value":82,
+            "heading":"printer ink"
+        }
+    ],
+
+    "transaction":[
+        {
+            "id":"jjd",
+            "amount":2435,
+            "quantity":8,
+            "discount":56,
+            "status":"shipped"
+        },
+        {
+            "id":"8jd",
+            "amount":2435,
+            "quantity":88,
+            "discount":56,
+            "status":"out of stock"
+        },
+        {
+            "id":"jjd",
+            "amount":278435,
+            "quantity":8,
+            "discount":56,
+            "status":"processing"
+        }
+    ],
+
+    "product":[
+        
+            {
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6O8pSCtuSVERyFDelPxbTCjZUJq80WNAM_w&s",
+               " Name":"laptop",
+               " Price":34000,
+              "  Stock":56,
+                "action":"Manage"
+              },
+              {
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6O8pSCtuSVERyFDelPxbTCjZUJq80WNAM_w&s",
+               " name":"laptop",
+               " price":34000,
+              "  stock":56,
+                "action":"Manage"
+              }
+        
+    ]
+}

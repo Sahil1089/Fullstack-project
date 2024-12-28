@@ -1,0 +1,402 @@
+.dashboard{
+    overflow-y: auto;
+
+
+    .searchbar{
+        height: 2.8rem;
+        border-radius: .2rem;
+        @include flex(row,unset);
+        margin: .2rem .5rem;
+        padding: 0 1rem;
+        display: flex;
+        color: #000;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+        box-shadow: 1px .4px 2px rgba(83, 83, 83, 0.42) , -2px -2px 4px white;
+    
+       >input{
+        margin-right: auto;
+        @include input(100%,1rem 0);
+        background:inherit;
+        outline: none;
+        border: none;
+       }
+    //    icon is svg
+     >svg{
+        font-size: 1.5rem;
+        opacity: 0.7;
+
+     }
+    }
+    img{
+        
+        @include square(2rem);
+        border-radius: 50%;
+    }
+
+
+.widgetcontainer{
+        @include flex(row,space-between,stretch,2rem);
+        padding: 2rem 2rem 2rem 0;
+        color: #000;
+        display: flex;
+        
+      
+
+        .widget{
+            padding: 1rem 1rem;
+            
+            @include flex(row,space-between,stretch,2rem);
+            width: fit-content;
+
+            
+        
+            box-shadow: 1px .4px 2px rgba(83, 83, 83, 0.42) , -2px -2px 4px white;
+            ;
+
+           .widgetinfo{
+            >p{
+                opacity: 0.7;
+                font-size: 0.86rem;
+            }
+            >h4{
+                font-size: 1.5rem;
+            }
+            >span{
+                @include flex(row,unset,unset,0.25rem)
+            }
+           }
+
+        .widcircle{
+            @include square(6rem);
+            position: relative;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background-color: green;
+            &::before{
+                content: "";
+                position: absolute;
+                @include square(4.8rem);
+                border-radius: 50%;
+                background-color: rgb(243, 239, 239);
+            }
+            span{
+                position: relative;
+                
+            }
+        }
+
+        }
+        
+       
+    }
+    
+
+@media (max-width:974px){
+    .widgetcontainer{
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+        }
+    }
+}
+
+
+
+
+
+// graph container
+.graph-container{
+    padding: 0 2rem 2rem 0;
+    @include flex(row,unset,unset,3rem);
+    overflow-x: auto;
+   
+    .revenue-chart{
+        width: 100%;
+        background-color: #fffefe;
+        
+        // background-color: #fff;
+        border-radius: 10px; 
+        padding: 2rem 3rem;
+        >h2{
+            @include heading();
+        }
+
+    }
+
+    .dash-category{
+        width: 100%;
+        max-width: 17rem;
+        background-color: #fff;
+        @include flex(column,center,unset,2rem);
+        padding: 1rem .2rem;
+        >h2{
+            margin: 1.5rem 0 2rem 0.25rem;
+            text-align: center;
+            @include heading;
+        }
+        >div{
+            overflow-y: auto;
+            padding-left: 0.5rem;
+        }
+        .categoryitem{
+            width: 100%;
+            padding: 1rem;
+            @include flex(row,space-between);
+            >h5{
+                letter-spacing:1px;
+            }
+            >div{
+                margin-left: auto;
+                width:7rem;
+                background-color: rgba(196, 191, 191, 0.819);
+                height:.6rem;
+                border-radius:20px;
+                flex: none;
+                >div{
+                    border-radius: 20px;
+                    height: 100%;
+                }
+            }
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.transaction-container{
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem 2rem 0;
+    height: 30rem;
+    overflow-x: auto;
+
+    >div{
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 1px .4px 2px rgba(83, 83, 83, 0.42) , -2px -2px 4px white;
+
+    }
+
+    .transactionbox{
+        width: 100%;
+        min-width: 20rem;
+        padding:.8rem;
+        overflow-x: auto;
+    }
+    
+    .gender-ratio{
+        width: 100%;
+        max-width: 20rem;
+        padding: 2rem;
+        position: relative;
+        >h2{
+            text-align: center;
+            margin: 1.5rem 0.5rem;
+            @include heading;
+        }
+        >p{
+            @include posc;
+            margin-top: 2rem;
+            margin-left: 4rem;
+            font-size: 2.5rem;
+        }
+    }
+   
+
+}
+}
+
+.coupon-container{
+    background-color: #e9e9e9;
+    width: 100%;
+    
+    position: relative;
+    >h2{width: fit-content;padding: .7rem;
+        border-radius: 12px;
+        margin: 2rem;
+        @include heading;
+        background-color: #fff;
+        box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+
+    }
+    >.coupongenerator{
+        height: 55vh;
+        position: absolute;
+        width: 90%;
+        background: rgb(255, 255, 255);
+        @include posc;
+        border-radius: 14px;
+        box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+        >form{
+            gap: 2rem;
+            
+            button{
+                @include button($w:80%);
+                position: fixed;
+                bottom: 4rem;
+                left: 10%;
+                
+                &:hover{
+                    outline: none;
+                    border: none
+                }
+                &:active{
+                    outline: none;
+                    border:blue;
+                }
+            }
+            >div{
+                @include flex(row,center,center,.5rem);
+            >input{
+                @include myInput;
+                margin-left: 1rem;
+                margin-right: .5rem;
+                margin-top: 2rem
+
+            }}
+           
+
+
+           
+              >fieldset{
+                width: 90%;
+                border: none;
+                padding: 2rem 1.5rem;
+                margin: 2rem .5rem;
+                color: black;
+
+                border-radius: 12px;
+                outline: none;
+                margin-right: 1rem;
+                background-color: #fff;
+                box-shadow: 4.1px 3.4px 2px rgba(128, 128, 128, 0.42) , -3px -4px 4px rgba(239, 237, 237, 0.86);
+
+            
+
+                background-color: rgb(253, 253, 253);
+                >legend{
+                    color: rgba(17, 17, 17, 0.952);
+                    opacity: 0.8;
+                    font-size: 1.2rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+                }
+                @include flex(row,space-between,center,unset);
+
+
+                >input{
+                    @include myInput(fit-content);
+                    border: none;
+                    outline: none;
+
+                }
+                
+            } 
+                
+       
+        }
+       
+        .couponbox{
+            display: flex;
+            background-color: rgb(228, 227, 227);
+            width: fit-content;
+            padding: 2rem;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+            
+            height: 6vh;
+            position: relative;
+            top:10%;
+            left: 10%;
+
+            align-items: center;
+
+       
+
+        .coupon{
+             @include button; 
+             padding: 0.8rem 1.5rem;    
+             border-radius: 12px; 
+             margin-left: 2rem;
+            
+            cursor: pointer;
+            &:hover{
+                outline: none;
+                border: none
+            }
+            &:active{
+                outline: none;
+                border:blue;
+            }
+        }}
+
+    }
+
+}
+.toss-container{
+@include flex(column,unset,unset,6rem);
+position: relative;
+>h2{
+    @include heading;
+    box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+    width: fit-content;
+    padding: 1.4rem;
+    margin: 2rem;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.tosscoin{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    
+    background: rgb(189, 164, 164);
+    border-radius: 14px;
+    transform-style: preserve-3d;
+    transition: all .8s; cursor: pointer
+    ;
+    box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+    
+ 
+    >div{
+        @include posc;
+
+        @include square(12rem);
+        border-radius: 50%;
+        background: rgb(224, 192, 7);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        backface-visibility: hidden;
+        &:first-of-type{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5r0BEMdClJKkZ6JU6REKjA35Ar8CvC40jww&s");
+        }&:last-of-type{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBEAF-HHDUlzzDhWM-yQEYgl0963q4aAu-gw&s");
+            transform: rotateY(180deg);
+        }
+       
+        
+    }
+}
+}
+

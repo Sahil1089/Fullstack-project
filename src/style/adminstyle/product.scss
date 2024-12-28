@@ -1,0 +1,177 @@
+.admin-productcontainer{
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    overflow: auto;
+    @include square(100%);
+    .del-customer{
+        color: rgb(186, 2, 54);
+    }
+
+    
+}
+.create-btn{
+    background-color: rgb(2, 154, 156);
+    @include square(2rem);
+    border-radius: 50%;
+    padding: .48rem .5rem;
+    color: white;position: fixed;top: 5%;right: 2.6rem;
+}
+.page-nav button{
+    background-color:rgb(2, 154, 156);
+    color: white;
+    font-weight: 600;
+    margin: 1rem 1.5rem;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    &:disabled{
+        background-color: rgba(13, 93, 103, 0.627);
+        cursor: none;
+        border: none;
+    }
+}
+.page-nav{
+    @include flex(row,unset,unset);
+    align-items: center;
+    padding: 2rem;
+    span{
+        color: rgb(6, 27, 96);
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+.management-container{
+    @include flex(row,center,unset,1.5rem);
+    background-color: rgba(244, 255, 254, 0.852);
+   
+// section
+  >section{
+    overflow-y: auto;
+    width: 100%;
+    height: 80vh;
+    max-width: 400px;
+    box-shadow: 4.1px 3.4px 2px rgba(86, 86, 86, 0.42) , -3px -4px 4px rgba(239, 237, 237, 0.86);
+    padding: 2.5rem;
+    background-color: #fff;
+    @include flex(column,center,center,2rem);
+    border-radius: 12px;
+    margin: 2rem 1rem;
+
+>strong{
+    @include heading;
+    font-weight: 500;
+    font-size: 2rem;
+}
+>p{
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+>span{
+    font-weight: 600;
+    font-size: 1.8rem;
+
+}
+h3{
+    font-weight: 600;
+    font-size: 1.8rem;
+    @include flex(row,center,center,.29rem);
+
+}
+    >img{
+        @include square(95%)
+    }
+  }
+
+
+    >article{
+        height: 80vh;
+        margin: 2rem .51rem;
+        background-color: #f8f9f9c6;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 4.1px 3.4px 2px rgba(86, 86, 86, 0.42) , -3px -4px 4px rgba(239, 237, 237, 0.86);
+>form{
+        @include flex(column,center,unset,1.5rem);
+        
+        >h2{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .imgInput{
+            border: none;
+            border-radius: 12px;
+            outline: none;
+            font-size: smaller;
+           width: 100%;
+            box-shadow: 4.1px 3.4px 2px rgba(128, 128, 128, 0.42) , -3px -4px 4px rgba(239, 237, 237, 0.86);
+
+        }
+        >button{
+            background-color: #0c847e;
+            margin-top: 4rem;
+            border: none;
+          
+            box-shadow: 4.1px 3.4px 2px rgba(79, 81, 79, 0.42) , -3px -4px 2px rgba(247, 248, 248, 0.86);
+            &:hover{
+                outline: none;
+                border: none
+            }
+            &:active{
+                outline: none;
+                border:#0c847e;
+            }
+        }
+        
+        >div{
+            @include flex(row,unset,unset,1.5rem);
+            >label{
+                padding: 1rem 1.2rem;
+                border-radius: 10px;
+                box-shadow: 4.1px 3.4px 2px rgba(128, 128, 128, 0.42) , -3px -4px 4px rgba(238, 239, 237, 0.86);
+
+                font-size: large;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            >input{
+                border: none;
+                padding: 1rem;
+                color: black;
+
+                border-radius: 12px;
+                outline: none;
+                background-color: #fff;
+                box-shadow: 4.1px 3.4px 2px rgba(128, 128, 128, 0.42) , -3px -4px 4px rgba(239, 237, 237, 0.86);
+
+            }
+            
+
+        }
+        .proBox{
+            width: fit-content;
+            padding: 2rem;
+            background-color: #fff;
+
+
+            
+            >img{
+                @include square(12rem);
+
+                object-fit: cover;
+            }  
+        }
+
+        
+      .left{
+        height: 40vh;
+        width: 40%;
+        background-color: red;
+        position: absolute;
+        left: 0;
+      }  
+
+}
+
+    }
+}
