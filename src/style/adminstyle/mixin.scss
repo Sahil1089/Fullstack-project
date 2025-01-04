@@ -33,9 +33,12 @@
 
 
 }
+@mixin box($r:1.2rem){
+    box-shadow: 1.9px 2.4px 4px rgba(66, 66, 66, 0.42) , -3px -3px 4px rgb(233, 232, 232);
+border-radius: $r;
+}
 @mixin button($c:#0c847e,$w:100%,$h:5vh){
     background-color: $c;
-    margin-top: 4rem;
     height: $h;
     width: $w;
     border: none;

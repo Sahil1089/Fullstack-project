@@ -17,7 +17,7 @@
     
        >input{
         margin-right: auto;
-        @include input(100%,1rem 0);
+        @include input(100%,1rem 0,);
         background:inherit;
         outline: none;
         border: none;

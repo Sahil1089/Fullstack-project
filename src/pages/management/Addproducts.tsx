@@ -64,7 +64,9 @@ function Addproducts() {
              onChange={ChangeImageHandler} required/>
         </div>
         {
-            photo && <div className='proBox'><img src={photo} alt="img" /></div>}
+            photo && <div className='proBox'>
+                <img src={photo} alt="img" />
+                </div>}
            <button type='submit'> Create</button>
         
 

@@ -1,0 +1,24 @@
+.addcart{
+    background-color: rgb(244, 242, 239);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .cartcontainer{
+        width: 78%;
+        height: 70%;
+        background-color: #fff;
+        color: black;
+        margin: 8.4rem 2.5rem;
+        @include box;
+    }
+    .billing{
+        width: 55%;
+        height: 60%;
+        background-color: #fff;
+        color: black;
+        margin: 9.7rem 1.2rem;
+@include box;
+@include flex(column,center,center,2rem)
+    }
+}

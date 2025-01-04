@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation , Location} from 'react-router-dom'
 import { Md12Mp, MdBarChart, MdCurrencyRupee, MdDashboard, MdMoney, MdPeople, MdPieChart } from "react-icons/md";
-import { FaBitcoin, FaChartLine, FaCoins, FaLine, FaShopify } from 'react-icons/fa';
+import { FaBitcoin, FaChartLine, FaCoins, FaFile, FaLine, FaShopify } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 import { FaChartPie } from 'react-icons/fa6';
 import { RiCoupon2Fill } from 'react-icons/ri';
@@ -161,6 +161,13 @@ return <aside>
             Icon={FaBitcoin}
             location={location}
             bgcolor='rgb(163, 140, 9)'
+             />
+
+<Li url="/admin/todo"
+            text="AddToDo" 
+            Icon={FaFile}
+            location={location}
+            bgcolor='rgb(163, 9, 35)'
              />
 
 

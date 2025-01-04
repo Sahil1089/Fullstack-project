@@ -1,0 +1,68 @@
+.todocontainer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    >h2{
+        @include heading;
+        @include input;
+        width: fit-content;
+        padding: 1rem 1.4rem;
+        border-radius: 12px;
+        box-shadow: 4.1px 3.4px 2px rgba(128, 128, 128, 0.42) , -3px -4px 4px rgba(238, 239, 237, 0.86);
+
+    }
+    >.todonav{
+        height: 6vh;
+        width: 96%;
+        padding: 2.6rem 2rem;
+        margin: 1rem;
+        border-radius: 14px;
+
+
+        position: absolute;
+        @include flex(row,unset,center,1.32rem);
+        margin-top: 5rem;
+        background-color: rgb(255, 255, 255);
+        >button{
+            color: white;
+            @include button($w:8rem,$c:rgb(233, 46, 108));
+        }
+    >input{
+        @include myInput(15rem);
+    }
+    }
+    .todolistitem{
+        position: absolute;
+        top: 12rem;
+        
+        width: 96%;
+        margin:2rem 1rem;
+        z-index: 9999;
+        >.inittodo{
+            position: absolute;
+            left: 20%;
+            top: 6rem;
+            opacity: 0.5
+
+        }
+    }
+    
+}
+.todoitem{
+    @include myInput;
+    margin:1.4rem 0;
+    @include flex(row,space-between,center,.5rem);
+    font-size: 1rem;
+    >button{
+        background-color: #fff;
+        &:hover{
+            outline: none;
+            border: none;
+        }
+    }
+    h2,h3{
+        font-weight: 200;
+        @include heading;
+    }
+}
