@@ -8,6 +8,7 @@ type productProps ={
     name:string;
     price:number;
     stock:number;
+    handler:()=>{}
 
 }
 

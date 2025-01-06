@@ -26,6 +26,10 @@ const Home = lazy(()=>import('./pages/User Page/Home'))
 const Cart = lazy(()=>import('./pages/User Page/AddtoCart')) 
 const Search= lazy(()=>import('./pages/User Page/Search')) 
 const Store= lazy(()=>import('./pages/User Page/Store')) 
+const Shipping= lazy(()=>import('./pages/User Page/Shipping')) 
+const Login= lazy(()=>import('./components/Login')) 
+const Orders= lazy(()=>import('./pages/User Page/Orders')) 
+
 
 
 // user router end here
@@ -59,6 +63,17 @@ function App() {
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/search' element={<Search/>}/>
 <Route path='/store' element={<Store/>}/>
+<Route path='/login' element={<Login/>}/>
+
+
+{/* user can access after login */}
+<Route>
+<Route path='/shipping' element={<Shipping/>}/>
+<Route path='/orders' element={<Orders/>}/>
+
+</Route>
+
+
 
 
 

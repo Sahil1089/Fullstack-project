@@ -1,0 +1,39 @@
+body{
+    background-color: #fff;
+}
+
+.login{
+    width: 100%;
+    height: 100vh;
+background-color: rgb(243, 251, 255);
+
+.banner{
+    width: 40%;
+    height: 20vh;
+    background-color: orange;
+    position: relative;
+    margin: 0rem 11rem;
+    margin-top: 5rem;
+    img{
+        width:100%;
+        height: 100%;
+    }
+    
+}
+
+.form{
+    margin: .12rem 11rem;
+    background-color: rgb(240, 248, 250);
+    width: 40%;
+    height: 70vh;
+    @include box(0);
+    @include flex(column,flex-start,center,2rem);
+
+    input{
+        @include input(70%);
+border: 1px solid rgba(5, 121, 150, 0.521);    }
+    button{
+        @include button($w:70%);
+    }
+}
+}

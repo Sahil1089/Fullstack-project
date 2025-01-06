@@ -1,0 +1,179 @@
+body{
+    background-color: #fff;
+}
+
+
+.search-nav{
+    width: 100%;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    background: linear-gradient(to right, rgba(7, 7, 15, 0.911) ,rgb(1, 43, 56),rgb(0, 41, 46));
+    color: white;
+    @include flex(row,space-evenly,center,1rem);
+    @include box(0);
+    >svg{
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+        margin: 0 1.5rem;
+       
+    }
+    
+    h1{
+        @include heading;
+    }div{
+        @include flex(row,space-between,center,.5rem);
+        width: 60%;
+        height: 5vh;
+        border-radius: 12px;
+        background-color: rgb(255, 255, 255);&:hover{
+            border: 3.8px solid rgb(0, 225, 255);
+        }
+        >svg{
+            font-size: 1.62rem;
+            color: rgb(23, 114, 114);
+            margin: 0 1.5rem;
+           
+        }
+    input{
+        @include input($w:98%);
+        height: 100%;
+        margin: 1rem;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.2rem;
+        color: black;
+
+        
+    }}
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #e6f1f7;
+    overflow: auto;
+    // &::-webkit-scrollbar{
+    //     display: hidden;
+    // }
+
+.banner{
+    margin-top: 8rem;
+    height: 44vh;
+    background-color: rgb(222, 231, 231);
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.product-search-page{
+    background-color: rgb(240, 249, 250);
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    height: 100%;
+  
+
+
+    >aside{
+        width:fit-content;
+        height: 60%;
+        margin: 1.4rem;
+        padding: .65rem;
+        background-color: white;
+        @include box(0);
+        h4,h2{
+            @include heading;
+        }
+
+        .select,.category{
+            
+            margin: 1rem 0;
+            select{
+                color: rgb(0, 0, 0);
+                @include input(12rem);
+                background-color: rgba(238, 253, 255, 0.452);
+                @include box;
+                option{
+                    color: red;
+                    background-color: black;
+                    @include input(12rem);
+
+                }
+            }
+        }
+        .maxprice{
+            margin: 1rem 0;
+            input{
+                background-color: rgba(238, 253, 255, 0.452);
+
+                color: rgb(50, 8, 235);
+                @include input(12rem);
+                @include box;
+            }
+        }
+       
+    }
+
+    // main section
+
+    main{
+        width: 100%;
+        height:100%;
+      
+        .search-product{
+            width: 100%;
+            height: 80%;
+            background-color: rgb(238, 232, 221);
+            overflow: auto;
+
+            &::-webkit-scrollbar{
+                display:none;
+            }
+
+        display: flex;
+    flex-wrap: wrap;}
+
+    }
+article{
+    height: 20%;
+    @include flex(row ,center,unset);
+    button{
+        @include button($w:3rem);
+        box-shadow: none;
+        @include box(6px);
+        padding: 1rem 2rem;
+        @include flex(row ,center,center);
+        color: white;
+        margin: 1rem;
+
+
+    }
+    span{
+        @include input(5em);
+        background-color: #f7f3f3;
+        height: 28%;
+        @include box(12px);
+        margin: 1rem;
+
+    }
+}
+
+
+
+   
+
+
+}
+
+
+}
+
+
+
+
+
+
+

@@ -19,6 +19,35 @@
     font-weight: 400;
     margin: 0;
 }
+
+
+
+.footer{
+    height: 30vh;
+    width: 100%;
+    z-index:9999999;
+  
+background: linear-gradient(to right, rgb(15, 7, 7) ,rgb(1, 43, 56),rgb(0, 41, 46));
+
+@include flex(row,space-evenly,unset);
+flex-wrap: wrap;
+span{
+    @include flex(column,unset,center,2.5rem);
+    margin-top: 1rem;
+    a{
+        color: white;
+        svg{
+
+        
+        font-size: 2.5rem;}
+        p{
+            font-size: 1em;
+        }
+    }
+
+
+}
+}
 input{
     background: transparent;
 }
@@ -79,13 +108,16 @@ a{
 // common component styling
 
 .header{
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(to right, rgb(15, 7, 7) ,rgb(1, 43, 56),rgb(0, 41, 46));
+    color: white;
     width: 100%;
-    position: absolute;
+    height: 8vh;
+    position:fixed;
     padding: .6rem;
     font-size: 2rem;
-    flex-wrap: wrap;
     top: 0;
+    z-index: 999999;
+    @include box(0);
     .logouser{
         position:absolute;
         left: 5px;
@@ -93,38 +125,54 @@ a{
     }
     @include flex(row,space-around,center,2rem);
     .searchbar{
-        margin-left: 6rem;
+        margin-left: 8rem;
 
         font-size: 1.8rem;
         width:30vw;
-        background-color: rgba(3, 160, 147, 0.901);
+        height: 90%;
+
+        background-color: rgba(237, 245, 244, 0.901);
         padding-right: 1rem;
         border-radius: 16px;
+        border: 1.2px solid rgba(0, 140, 255,.7);
+       
         
         @include flex(row,center,center,.9rem);
-        >a{
-            margin-top: .55rem;
+        >a{        position: relative;
 
+            margin-top: .55rem;
+            color: rgba(0, 140, 255,.7);
+            &:hover{
+                border-radius: 0;
+                padding:0;
+                transition:none;
+    background:transparent;
+    box-shadow: none;
+          color:rgba(0, 140, 255,.7);
+      }
             
         }
         input{
-            border-radius: 10px;;
-            height: 4.8vh;
-            @include input;
-            background-color: rgba(241, 241, 241, 0.976);
-
+            @include input(10rem);
+            background: transparent;
+            margin-left: 0;
             cursor: pointer;
-            color: black;
         }
+     
     }
     a{
-        color: black;
+        color: rgb(255, 255, 255);
         letter-spacing: 2px;
-        font-size: 1.5rem;           
+        font-size: 2rem;           
 
         &:hover{
-            color: rgb(5, 111, 119);
-        }
+            border-radius: 16px;
+            padding:.5rem 1rem;
+            transition: all ease .54s;
+            @include box(6px);
+background-color: #ebfdff;
+      color: #e6a903;
+  }
     }
 
     button{
@@ -132,14 +180,20 @@ a{
 
         outline: none;
         border: none;
-        color: black;
+        color: rgb(255, 255, 255);
 
         background:transparent;
+        font-size: 1.42rem;
         position: relative;
         &:hover{
-                  border-radius: 16px;
+                  border-radius: 11px;
+                  @include box;
+                  padding:.54rem 1.2rem;
 
-            color: #2600ff;
+                  transition: all ease .48s;
+                  background-color: #fff;
+
+            color: #0a53f0;
         }
         @include flex(column,center,center,.24rem)
        
@@ -150,17 +204,29 @@ a{
         background-color: #f0efe8;
         color: black;
         border: .75px solid rgb(216, 212, 212);
-        padding:12px;
+        padding:28px;
         border-radius: 8px;
         position: absolute;
-        width: 100px;
+        width:fit-content;
         top: 4.5rem;
-        @include box;
         
-        left: calc(96% - 100px);
+        @include box(0);
+        
+        left: calc(86% - 100px);
         margin-right: 2px;
         div{
-            @include flex(column,center,center,.5rem);
+            >a{
+                color: black;
+            }
+            @include flex(column,center,center,.59rem);
+      button{
+    font-size: 2rem;
+    font-weight: 700;
+    color: blue;
+
+            }            
+                
+            
         }
      
     }

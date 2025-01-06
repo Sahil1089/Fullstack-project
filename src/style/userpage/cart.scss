@@ -5,12 +5,16 @@
     display: flex;
 
     .cartcontainer{
-        width: 78%;
-        height: 70%;
+        width: 88%;
+        height: 80vh;
         background-color: #fff;
         color: black;
         margin: 8.4rem 2.5rem;
-        @include box;
+        @include box(0);
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     .billing{
         width: 55%;
@@ -20,5 +24,94 @@
         margin: 9.7rem 1.2rem;
 @include box;
 @include flex(column,center,center,2rem)
+    }
+    .cart-item{
+
+        display: flex;
+        margin: 2.5rem .5rem;
+        position: relative;
+        margin-bottom: 6rem;
+        &:hover{
+            background-color: #dad5d5c3;
+        }
+        .cart-nav{
+            // border-bottom: .1px solid rgba(128, 128, 128, 0.348);
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: .6rem;
+            justify-content: space-between;
+            align-items: center;
+            height: fit-content;
+            position: absolute;
+            bottom: -40px;
+            padding: 0 1.2rem;
+            .pmb{
+                @include flex(row,center,center,.41rem);
+
+            }
+            p{
+                font-size: 1.4rem;
+                padding:0 .44rem;
+                @include box;
+                margin-top: .9rem;
+
+            
+            }
+            
+         >div{
+            display: flex;
+            gap: .5rem;
+
+            margin-bottom: .4rem;
+
+         
+            button{
+                background:transparent;
+                border: none;            margin-top: .9rem;
+
+            }
+         }
+
+        }
+
+        img{
+            @include square(10rem);
+            margin-bottom: .4rem;
+        }
+        article{
+            width: calc(100% - 16rem);
+            position: relative;
+            margin: .2rem .64rem;
+            @include flex(column,flex-start,unset,1rem);
+
+        }
+       
+        button{
+            border: .2px solid rgba(0, 0, 0, 0.424);
+            width: fit-content;
+            height:fit-content;
+            padding: .26rem;
+            cursor: pointer;
+            @include flex(row,center,center,unset);
+            font-size: 1.2rem;
+            border-radius: 12px;
+            @include box;
+
+        }
+    }
+    >aside{
+        text-transform: capitalize;
+        input{
+            @include input(12rem);
+            border: .1px solid rgba(0, 186, 219, 0.603);
+            border-radius: 4px;
+        }
+        button{
+            @include button($w:80%);
+            @include box;
+            color: white;
+            font-size: 1.4rem;
+        }
     }
 }

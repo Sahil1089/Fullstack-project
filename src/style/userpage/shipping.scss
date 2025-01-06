@@ -1,0 +1,54 @@
+.shipping{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    .back{
+        @include button($w:5rem,$c:rgb(58, 8, 114));
+        color: white;
+        position:fixed;
+        top: 3rem;
+        left: .6rem;
+        font-size: 2rem;
+        border-radius: 15px;
+        margin: 2rem 2rem;
+        @include flex(column,center,center);
+
+    }
+
+    form{
+        width: 70%;
+        position: absolute;
+        padding: 2rem;
+        top: 20%;
+        left: 20%;
+        background-color: #eeebeb;
+        border-radius: 12px;
+        @include box;
+        @include flex(column,center,stretch,1.8rem);
+        h2{
+            @include heading;
+            font-weight: 500;
+            margin: 2rem 1rem;
+        }
+        input,select{
+            @include input($w:80%);
+            border: 1px solid blue;
+            margin: 0 2rem;
+            border-radius: 6px;
+
+        }
+        
+       
+        button{
+            @include button($w:82%,$c:rgb(58, 8, 114));
+            color: white;
+            font-size: 1.42rem;
+            position: relative;
+            left: 4%;
+            border-radius: 6px;
+         
+
+
+        }
+    }
+}
